@@ -11,7 +11,7 @@ folder="scratch/experiments/Test_${MaxSpeed}_${nDevices}/run"
 echo -n "Running experiments: "
 
 mkdir -p $folder
-for r in `seq 1 5`;
+for r in `seq 1 30`;
 do
   echo -n " $r"
   ./ns3 run "$script --RngRun=$r --nDevices=$nDevices --MobileNodeProbability=$MobileNodeProbability --MinSpeed=$MinSpeed --MaxSpeed=$MaxSpeed" >> "$folder/log.txt" 2>&1
